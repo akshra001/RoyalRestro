@@ -1,0 +1,16 @@
+[
+    {
+        "item_Id": 101,
+        "item_Name": "Bread Basket",
+        "rate": 120,
+        "category": "snacks",
+        "description":"Assortment of fresh baked fruit breads and muffins 5.50"
+    },
+    {
+        "item_Id": 102,
+        "item_Name": "Honey almond",
+        "rate": 10,
+        "category": "snacks",
+        "description":"Natural cereal of honey toasted oats, raisins, almonds and dates 7.00"
+    }
+]

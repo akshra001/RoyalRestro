@@ -1,0 +1,81 @@
+
+.example-card {
+  
+  width: 500px;
+  
+  height: 500px;
+  
+  margin-left: 
+  500px;
+  
+  margin-top: 30px;
+  
+  background: rgb(57, 110, 94)
+  
+  
+  }
+  
+  
+  
+  .header{
+  
+  background: rgb(207, 230, 240);
+  
+  color: rgb(35, 39, 35);
+  margin-right: -23px;
+  margin-left: -23px;
+  
+  
+  
+  }
+  
+  .md-form{
+  
+    font-size: 25px;
+  
+  font:bold;
+  
+  font-style: italic;
+  
+  color: rgb(207, 207, 17);
+  
+  }
+  
+  .buttn{
+  
+  background: rgb(207, 230, 240);
+  
+  margin-left: 126px;
+  margin-right: 237px;
+  font:green;
+
+  
+  }
+  
+  .placeholder{
+  
+  color: rgb(235, 4, 235);
+  
+  font-size: 25px;
+  
+  font: bold;
+  
+  
+  
+  }
+  
+  
+  
+  .text-center{
+  
+  color: #181616;
+  
+  }
+
+  .alert1{
+    font-size: 14px;
+    color: red
+  }
+  .link{
+    color: blue
+  }

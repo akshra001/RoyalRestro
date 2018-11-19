@@ -1,0 +1,12 @@
+<button (click)="OnClick()" mat-button>Back</button>
+
+<p>
+  {{length}} Items are in cart
+</p>
+
+<table  *ngFor="let data of value">
+  <tr>
+    <td>{{data.item_Name}}</td>
+    <td>{{data.rate}}</td>
+  </tr>
+</table>
