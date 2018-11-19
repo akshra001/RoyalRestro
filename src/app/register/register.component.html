@@ -1,0 +1,119 @@
+<div class="outerbody">
+
+
+<div class="container">
+    <div class="header">
+        
+            
+             <h1>
+        
+               <strong>Sign Up</strong>
+        
+             </h1>
+        
+           </div>
+ <div class="formbody">
+
+      <form class="md-form" [formGroup]="registerForm" (ngSubmit)="Register(registerForm.value)">
+
+
+        <!-- Email -->
+
+     
+
+          <mat-form-field>
+
+            <input class="placeholder" type="text" matInput placeholder="firstname" #reffname class="form-control" formControlName="firstname">
+
+          </mat-form-field>
+
+
+          <mat-form-field>
+
+            <input  type="text" matInput placeholder="lastname" #reflname class="form-control" formControlName="lastname">
+
+          </mat-form-field>
+
+          <mat-form-field>
+            <input type="text" matInput placeholder="Username" #refid class="form-control" formControlName="username">
+
+          </mat-form-field>
+          <span  *ngIf="registerForm.controls['username'].hasError('required') && registerForm.controls['username'].touched ">
+            <!-- <div *ngIf="fNameRef.errors && (fNameRef.dirty || fNameRef.touched)" class="alert alert-danger"> -->
+            <span style="font-weight:bold" *ngIf="registerForm.controls['username'].hasError('required')" class="alert alert-danger">
+              *Please enter id
+            </span>
+
+          </span>
+
+        
+
+
+
+        <!-- Password -->
+
+        <div class="md-form">
+
+          <mat-form-field>
+
+            <input type="text" matInput placeholder="password" #refpass class="form-control" formControlName="password">
+
+          </mat-form-field>
+
+
+          <span  *ngIf="registerForm.controls['password'].hasError('required') && registerForm.controls['password'].touched ">
+            <!-- <div *ngIf="fNameRef.errors && (fNameRef.dirty || fNameRef.touched)" class="alert alert-danger"> -->
+            <span style="font-weight:bold" *ngIf="registerForm.controls['password'].hasError('required')" class="alert alert-danger">
+              *Please enter pass
+            </span>
+
+          </span>
+        </div>
+
+          <mat-form-field>
+
+            <input type="text" matInput placeholder="address" #refpass class="form-control" formControlName="address">
+
+          </mat-form-field>
+
+
+          <span  *ngIf="registerForm.controls['address'].hasError('required') && registerForm.controls['address'].touched ">
+            <!-- <div *ngIf="fNameRef.errors && (fNameRef.dirty || fNameRef.touched)" class="alert alert-danger"> -->
+            <span style="font-weight:bold" *ngIf="registerForm.controls['address'].hasError('required')" class="alert alert-danger">
+              *Please enter add
+            </span>
+
+          </span>
+
+
+      
+
+
+        <div class="d-flex justify-content-around">
+
+
+        </div>
+
+        <br>
+
+
+        <!-- Sign in button -->
+        <span>
+          <div class=buttn>
+
+            <button (click)="Register()" mat-button type="submit" >Submit</button>
+          </div>
+
+
+          <a href="user" class=cancel>Cancel</a>
+        </span>
+
+
+      </form>
+    </div>
+
+    
+
+</div>
+    
+</div>

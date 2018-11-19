@@ -1,0 +1,92 @@
+<!-- <<<<<<<<<<BACK BUTTON>>>>>>>>>>>>> -->
+<button (click)="onClick()" mat-button>Back</button>
+<!-- <<<<<<<<<>>>>>>>>>>>>>> -->
+<p *ngIf="orderId">
+  Your order ID is {{orderId}}
+</p>
+<!-- <<<<<<<<<<Total Items>>>>>>>>>>>>>> -->
+<p class="totalHeader">
+  Total {{length}} Items are in cart
+</p>
+<!-- <<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+<!-- <<<<<<<<<<Cart Table>>>>>>>>>>>>> -->
+<table *ngIf="cart.length>0">
+  <thead>
+    <tr class="table100-head">
+      <th class="column4">Name</th>
+      <th class="column4">Price</th>
+      <th class="column4">Quantity</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let data of cart">
+    <td class="column4">{{data.itemName}}</td>
+    <td class="column4">${{data.rate}}</td>
+    <td>
+      <button class="quantityButton" mat-button (click)="decreaseQuantity(data)">
+        <b>&minus;</b>
+      </button>
+      <span class="quantity">x{{data.quantity}}</span>
+      <button class="quantityButton" mat-button (click)="increaseQuantity(data)">
+        <b>+</b>
+      </button>
+      <button class="quantityButton" mat-button (click)="removeItem(data)">Remove</button>
+    </td>
+  </tr>
+  <tr>
+    <td class="totalAmount">Total</td>
+    <td class="totalAmount">${{total}}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>
+
+      <form  #couponForm="ngForm" (ngSubmit)="onSubmit(couponForm.value)">
+        <mat-form-field>
+          <input matInput type="text" disabled="{{is_edit}}" #fNameRef="ngModel" name="coupon" placeholder="Coupon Code" ngModel>
+        </mat-form-field>
+        <button class="placeOrder" disabled="{{is_edit}}" mat-button type="submit">Apply</button>
+        <!-- <button class="placeOrder" mat-button (click)="removeCoupon()">Remove</button> -->
+        <br>{{coupon_success}}
+      </form>
+      <button class="placeOrder" mat-button (click)="removeCoupon()">Remove</button>
+    
+    </td>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>
+      <button *ngIf="coupon_success" class="placeOrder" mat-button (click)="placeOrder()">Place Order</button>
+    </td>
+  </tr>
+
+</table>
+
+<br>
+<br>
+<br>
+<br>
+
+<!-- Ongoing Offers -->
+<table *ngIf="coupons">
+  <caption>
+    <b>Ongoing Offers</b>
+  </caption>
+  <tr>
+    <th>Code</th>
+    <th>Discount Percentage</th>
+    <th>Maximum Discount</th>
+    <th>Expiry Date</th>
+    <th>Terms and Conditions</th>
+  </tr>
+  <tr *ngFor="let couponData of coupons">
+    <td>{{couponData.code}}</td>
+    <td>{{couponData.discountPercentage}}</td>
+    <td>{{couponData.maximumDiscount}}</td>
+    <td>{{couponData.expiryDate}}</td>
+    <td>{{couponData.termsAndConditions}}</td>
+  </tr>
+</table>

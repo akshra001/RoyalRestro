@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td style="height:35px;width:340px">Order Id</td>
+    <td>Amount</td>
+    <td>Order status</td>
+  </tr>
+</table>
+<table class="menu" *ngFor="let data of tableData">
+
+  <tr>
+    <td style="height:35px;width:340px">
+      <h4>{{data.orderId}}</h4>
+    </td>
+    <td style="margin-left:0px;height:35px;width: 70px">
+      <p>${{data.rate}}</p>
+    </td>
+
+    <td>
+      <p class="w3-text-grey">{{data.orderStatus}}</p>
+    </td>
+
+  </tr>
+  <tr>
+
+  </tr>
+</table>

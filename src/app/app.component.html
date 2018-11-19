@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a style="font-family: cursive;font-size: 33px" href="#home" class="w3-bar-item w3-button">Royal Restaurant</a>
+
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+
+      <button routerLink="/cart" class="cart">
+        <img src=".../.././assets/cart.jpg " height="30px" width="40px">
+        <br>Cart
+      </button>
+      <!-- <a routerLink="/admin" class="w3-bar-item w3-button">Admin</a> -->
+      <a href="#home" class="w3-bar-item w3-button">Home</a>
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#menu" class="w3-bar-item w3-button">Menu</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+      <a href="order-history" class="w3-bar-item w3-button">My Orders</a>
+      <a href="user" class="w3-bar-item w3-button" (click)="logout()">Logout</a>
+      <div id="items">{{length}}</div> 
+    </div>
+  </div>
+</div>
+<div id="router">
+  <router-outlet></router-outlet>
+</div>

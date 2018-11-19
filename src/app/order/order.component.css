@@ -1,0 +1,13 @@
+p{
+    color:cadetblue;
+    font-size: 25px;
+}
+.face{
+    font-size: 50px;
+
+}
+.outer{
+    background-color: bisque;
+    height:580px;
+    width:100%;
+}
